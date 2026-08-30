@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仪表信息卡片</title>
+    <style>
+        body { font-family: 'Segoe UI', "Microsoft YaHei", sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; color: #333; box-sizing: border-box; }
+        .data-card { background: #ffffff; width: 420px; max-width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); overflow: hidden; transition: transform 0.3s ease; }
+        .data-card:hover { transform: translateY(-5px); }
+        .card-header { background-color: #4a90e2; color: #ffffff; padding: 24px; text-align: center; }
+        .card-header h2 { margin: 0; font-size: 1.4rem; font-weight: 600; letter-spacing: 2px; line-height: 1.5; word-break: break-word; }
+        .card-body { padding: 30px; }
+        .info-row { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 16px 0; border-bottom: 1px dashed #eaeaea; }
+        .info-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .info-row:first-child { padding-top: 0; }
+        .label { color: #7f8c8d; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+        .label::before { content: ''; display: inline-block; width: 6px; height: 6px; background-color: #4a90e2; border-radius: 50%; }
+        .value { font-size: 1.05rem; font-weight: 600; color: #2c3e50; text-align: right; max-width: 62%; overflow-wrap: anywhere; line-height: 1.45; }
+        .message { text-align: center; color: #2c3e50; font-size: 1.05rem; font-weight: 600; line-height: 1.6; }
+        @media (max-width: 480px) { .card-body { padding: 24px; } .info-row { align-items: flex-start; } .value { max-width: 58%; font-size: 1rem; } }
+    </style>
+</head>
+<body>
+    <div class="data-card">
+        <div class="card-header">
+            <h2>60万吨/年环烷基<br>变送器</h2>
+        </div>
+        <div class="card-body">
+            <div class="info-row"><div class="label">类别</div><div class="value">60万吨/年环烷基</div></div>
+            <div class="info-row"><div class="label">类型</div><div class="value">变送器</div></div>
+            <div class="info-row"><div class="label">仪表位号</div><div class="value">PT-P103B3</div></div>
+            <div class="info-row"><div class="label">工位名称</div><div class="value">P103B润滑油循环压力</div></div>
+            <div class="info-row"><div class="label">仪表量程</div><div class="value">（0～1）MPa</div></div>
+            <div class="info-row"><div class="label">介质名称</div><div class="value">润滑油</div></div>
+            <div class="info-row"><div class="label">介质温度</div><div class="value">68℃</div></div>
+            <div class="info-row"><div class="label">介质压力</div><div class="value">0.1MPa</div></div>
+            <div class="info-row"><div class="label">所属罐区</div><div class="value">60万吨/年环烷基</div></div>
+        </div>
+    </div>
+</body>
+</html>
